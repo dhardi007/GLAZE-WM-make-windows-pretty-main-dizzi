@@ -1,14 +1,11 @@
 # SI SE BUGEA LA VENTANA EN FULLSCREEN (al usar Alt+F):
 # ----------------- ACTIVAR VANILLA Windows -------------------
-# 0. METEDO 1: [bugfix]; usa las arrows = windows + -> DOWN y Windows + <- LEFT
-# si no funciona..
 
-# 1. METODO 2: simplemente; Change WORKSPACE, usa las arrows < > windows CTRL.
-# [Y si la ventana esta chiquita, usa alt + F para reubicarla, y luego procede]
+# METODO 1: Usa alt + F (floating) y luego re posiciona la ventana con Windows Left < >
+# L;-----> Trucazo: para aplicaciones como GEFORCE NOW o Lol bloqueadas, debes de cambiar de escritorio con Windows + Ctrl
 
-# 2. Con el mouse arrastra la ventana [se desbugea]
-
-# 3. [Al desbugear] pasa al 3r estado [mid], Windows tiling vanilla tiene 3 posiciones [< |mid| >] al usar windows < left
+# METODO 2: SI SIGUE BLOQUEADO, CAMBIA DE ESCRITORIO, REGRESA Y ARRASTRA LA VENTANA, pero no deberia de pasar mas.
+# L;-----> Trucazo: esto tmb aplica para cuando las ventanas se minimizan al maximo. Con el matiz de que debes agrandar la ventana con Alt +F11 y luego lo de arriba.
 
 # ---------------- configuration GlazeWM ----------------------
 general:
@@ -72,10 +69,14 @@ window_effects:
       color: "#a1a1a1"
 
 window_behavior:
-  initial_state: "floating"
+  initial_state: "floating" # ← Mejor para un window manager
   state_defaults:
     floating:
-      centered: false # ✅ NO centrar
+      centered: false # ← ✅ EVITA EL CENTRADO AUTOMÁTICO
+      shown_on_top: false
+    fullscreen:
+      maximized: false
+      shown_on_top: false
 
   # ========================================
   # APLICACIONES ESPECÍFICAS
@@ -105,6 +106,10 @@ window_rules:
         # Ignore rules for various 3rd-party apps.
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper*" }
+
+  - commands: ["set-floating"]
+    match:
+      - window_class: { regex: ".*" } # Aplica a todas las ventanas
 
 # ========================================
 # ✅ KEYBINDINGS ESENCIALE
@@ -181,7 +186,8 @@ keybindings:
 
     # be inserted.
   - commands: ["toggle-floating --centered"]
-    bindings: ["alt+shift+space"]
+    bindings: ["alt+f"]
+    # bindings: ["alt+shift+space"]
     # Change focus from tiling windows -> floating -> fullscreen.
 
     # Change the focused window to be floating.
@@ -197,7 +203,7 @@ keybindings:
     #       "set-fullscreen",
     #       'shell-exec powershell -WindowStyle Hidden -Command "$wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup(''Fullscreen ON, desactiva con arrows+ctrl <🔹>'', 1, ''GlazeWM'', 64)"',
     #     ]
-    bindings: ["alt+f"]
+    bindings: ["alt+f11"]
     # Change the focused window to be fullscreen.
 
   - commands: ["toggle-minimized"]

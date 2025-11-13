@@ -149,6 +149,10 @@ window_rules:
       - window_process: { equals: "Calculator" }
       - window_process: { equals: "Taskmgr" }
 
+  - commands: ["set-tiling"]
+    match:
+      - window_class: { regex: ".*" } # Aplica a todas las ventanas
+
       # Notificaciones
       # - window_title: { regex: "Notification|Alert" }
 
@@ -235,7 +239,8 @@ keybindings:
 
     # be inserted.
   - commands: ["toggle-floating --centered"]
-    bindings: ["alt+shift+space"]
+    bindings: ["alt+f"]
+    # bindings: ["alt+shift+space"]
     # Change focus from tiling windows -> floating -> fullscreen.
 
     # Change the focused window to be floating.
@@ -245,13 +250,13 @@ keybindings:
     # Change the focused window to be tiling.
 
   # - commands: ["toggle-fullscreen"]
-  # - commands: ["set-fullscreen"]
-  - commands:
-      [
-        "set-fullscreen",
-        'shell-exec powershell -WindowStyle Hidden -Command "$wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup(''Fullscreen ON, desactiva con arrows+ctrl <🔹>'', 1, ''GlazeWM'', 64)"',
-      ]
-    bindings: ["alt+f"]
+  - commands: ["set-fullscreen"]
+    # - commands:
+    #     [
+    #       "set-fullscreen",
+    #       'shell-exec powershell -WindowStyle Hidden -Command "$wshell = New-Object -ComObject Wscript.Shell; $wshell.Popup(''Fullscreen ON, desactiva con arrows+ctrl <🔹>'', 1, ''GlazeWM'', 64)"',
+    #     ]
+    bindings: ["alt+f11"]
     # Change the focused window to be fullscreen.
 
   - commands: ["toggle-minimized"]
