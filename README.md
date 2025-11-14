@@ -50,6 +50,12 @@ Alt + M - Minimizar
 Alt + Enter - Abrir terminal
 
 ```
+
+
+https://github.com/user-attachments/assets/226106ac-2e0c-4912-adac-e3e41b31d91b
+
+
+
 # ─❯ ⚠ make-windows-pretty-main-dizzi
         |
         ╰─❯ Basado en: https://github.com/vimichael/make-windows-pretty?tab=readme-ov-file
