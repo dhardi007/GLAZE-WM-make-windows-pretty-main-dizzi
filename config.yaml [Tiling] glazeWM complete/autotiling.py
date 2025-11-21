@@ -67,7 +67,7 @@ async def auto_tiling_logic(websocket):
     return True
 
 async def main():
-    print("🚀 Iniciando auto-tiling...")
+    print("🚀 [Tiling] Iniciando auto-tiling...")
     
     # Puertos a probar (en orden de prioridad)
     ports = [6023, 6123, 6223, 6323]
