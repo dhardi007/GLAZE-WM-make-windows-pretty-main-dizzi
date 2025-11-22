@@ -121,6 +121,14 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper*" }
 
+  # ========================================
+  # APLICACIONES ESPECÍFICAS
+  # ========================================
+  - commands: ["set-floating"]
+    match:
+      - window_process: { equals: "Calculator" }
+      - window_process: { equals: "Taskmgr" }
+
   # ✅ AGREGAR ESTAS REGLAS para diálogos flotantes
   # SOLO las más esenciales
   # 3. Diálogos de búsqueda/reemplazo (más específico)
@@ -147,23 +155,12 @@ window_rules:
   - commands: ["set-floating"]
     match:
       - window_class: { equals: "#32770" } # Diálogos nativos
-      - window_process: { equals: "Calculator" }
-      - window_process: { equals: "Taskmgr" }
-
-  - commands: ["set-tiling"]
-    match:
-      - window_class: { regex: ".*" } # Aplica a todas las ventanas
-
       # Notificaciones
-      # - window_title: { regex: "Notification|Alert" }
+      - window_title: { regex: "Notification|Alert" }
 
-  # ========================================
-  # APLICACIONES ESPECÍFICAS
-  # ========================================
-  - commands: ["set-floating"]
-    match:
-      - window_process: { equals: "Calculator" }
-      - window_process: { equals: "Taskmgr" }
+  # - commands: ["set-tiling"]
+  #   match:
+  #     - window_class: { regex: ".*" } # Aplica a todas las ventanas
 
 # ========================================
 # ✅ KEYBINDINGS ESENCIALE

@@ -5,13 +5,13 @@ param()
 function Test-EdgeExists {
     $edgePaths = @(
         "C:\Program Files (x86)\Microsoft\Edge",
-        "C:\Program Files (x86)\Microsoft\EdgeWebView",
+        # "C:\Program Files (x86)\Microsoft\EdgeWebView",
         "$env:USERPROFILE\AppData\Local\Microsoft\Edge",
-        "$env:USERPROFILE\AppData\Local\Microsoft\EdgeUserData", 
-        "$env:USERPROFILE\AppData\Local\Microsoft\EdgeWebView",
+        "$env:USERPROFILE\AppData\Local\Microsoft\EdgeUserData",
+        # "$env:USERPROFILE\AppData\Local\Microsoft\EdgeWebView",
         "$env:LOCALAPPDATA\Microsoft\Edge"
     )
-    
+
     foreach ($path in $edgePaths) {
         if (Test-Path $path) {
             return $true
@@ -29,11 +29,11 @@ if (-NOT (Test-EdgeExists)) {
 # Verificar y elevar privilegios si es necesario
 if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Host "Microsoft Edge detectado. Elevando privilegios a Administrador..." -ForegroundColor Yellow
-    
+
     # Re-ejecutar el script como administrador y CERRAR después
     $scriptPath = $myinvocation.mycommand.definition
     $arguments = "-Command `"& '$scriptPath'; exit`""
-    
+
     $process = Start-Process pwsh -Verb RunAs -ArgumentList $arguments -PassThru
     # Esperar a que el proceso elevado termine
     $process.WaitForExit()
@@ -50,16 +50,16 @@ Write-Host "Eliminando Microsoft Edge..." -ForegroundColor Yellow
 # Función para forzar cierre de procesos relacionados con Edge
 function Stop-EdgeProcesses {
     Write-Host "Deteniendo todos los procesos de Edge..." -ForegroundColor Yellow
-    
+
     $edgeProcessNames = @(
-        "msedge", 
-        "MicrosoftEdge", 
-        "edgewebview", 
+        "msedge",
+        "MicrosoftEdge",
+        "edgewebview",
         "msedgewebview2",
         "MicrosoftEdgeUpdate",
         "edge"
     )
-    
+
     $processesStopped = 0
     foreach ($processName in $edgeProcessNames) {
         try {
@@ -76,7 +76,7 @@ function Stop-EdgeProcesses {
             Write-Host "No se pudo detener proceso $processName : $($_.Exception.Message)" -ForegroundColor Red
         }
     }
-    
+
     if ($processesStopped -gt 0) {
         Write-Host "Esperando 3 segundos para que los procesos se cierren..." -ForegroundColor Yellow
         Start-Sleep -Seconds 3
@@ -89,29 +89,29 @@ function Remove-WithRetry {
         [string]$Path,
         [int]$MaxAttempts = 3
     )
-    
+
     if (-not (Test-Path $Path)) {
         Write-Host "La ruta no existe: $Path" -ForegroundColor Yellow
         return $true
     }
-    
+
     for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
         try {
             Write-Host "Intento $attempt para eliminar: $Path" -ForegroundColor Cyan
-            
+
             # Tomar ownership primero
             try {
                 & takeown /f "$Path" /r /d y 2>&1 | Out-Null
                 & icacls "$Path" /grant administrators:F /t 2>&1 | Out-Null
             } catch { }
-            
+
             Remove-Item -Path $Path -Recurse -Force -ErrorAction Stop
             Write-Host "✓ Eliminado exitosamente: $Path" -ForegroundColor Green
             return $true
         }
         catch {
             Write-Host "Intento $attempt falló: $($_.Exception.Message)" -ForegroundColor Red
-            
+
             if ($attempt -lt $MaxAttempts) {
                 Write-Host "Reintentando en 2 segundos..." -ForegroundColor Yellow
                 Stop-EdgeProcesses
@@ -119,7 +119,7 @@ function Remove-WithRetry {
             }
         }
     }
-    
+
     Write-Host "✗ No se pudo eliminar después de $MaxAttempts intentos: $Path" -ForegroundColor Red
     return $false
 }
@@ -133,7 +133,7 @@ try {
         "C:\Program Files (x86)\Microsoft\Edge",
     # "C:\Program Files (x86)\Microsoft\EdgeWebView",
         "$env:USERPROFILE\AppData\Local\Microsoft\Edge",
-        "$env:USERPROFILE\AppData\Local\Microsoft\EdgeUserData", 
+        "$env:USERPROFILE\AppData\Local\Microsoft\EdgeUserData",
     # "$env:USERPROFILE\AppData\Local\Microsoft\EdgeWebView",
         "$env:LOCALAPPDATA\Microsoft\Edge"
     )

@@ -114,9 +114,9 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper*" }
 
-  - commands: ["set-floating"]
-    match:
-      - window_class: { regex: ".*" } # Aplica a todas las ventanas
+  # - commands: ["set-floating"]
+  #   match:
+  #     - window_class: { regex: ".*" } # Aplica a todas las ventanas
 
 # ========================================
 # ✅ KEYBINDINGS ESENCIALE
