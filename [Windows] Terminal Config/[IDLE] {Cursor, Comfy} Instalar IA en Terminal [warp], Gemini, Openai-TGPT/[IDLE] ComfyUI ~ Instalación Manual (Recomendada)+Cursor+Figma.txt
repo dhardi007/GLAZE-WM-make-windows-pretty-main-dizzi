@@ -1,0 +1,95 @@
+
+█▀▀ █▄░█   █░░ █ █▄░█ █░█ ▀▄▀ ▀
+██▄ █░▀█   █▄▄ █ █░▀█ █▄█ █░█ ▄
+
+# ~ IDLE's install:
+
+# 1. Clonar repositorio
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+
+# 2. Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate  # Windows
+
+# 3. Instalar dependencias
+python -m pip install --upgrade pip
+
+# Instalar dependencias básicas primero
+pip install pyyaml pillow numpy requests
+
+# Luego PyTorch para CPU (más estable para descargar)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# y requirements [con esta deberia de sobrar?]
+pip install -r requirements.txt
+
+# 4. Ejecutar (modo CPU para Intel GPU)
+python main.py --cpu 
+			# 󱞩 o ejecuta: ...
+
+# →  python main.py
+
+
+█▀▀ █▀█ █▀▄▀█ █▀▀ █▄█ █░█ █
+█▄▄ █▄█ █░▀░█ █▀░ ░█░ █▄█ █
+		
+		󱞩 󰀦 IDLE Photo Editor IA MASIVO bro .. Mejor que Photoshop!!  [100GB-1TB] 
+		
+		
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+				
+					󱞩 Instalar:
+					https://www.comfy.org/download
+
+
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+
+
+yay -S cursor-bin
+sudo chown -R $(whoami) '/usr/share/cursor/resources/app'
+
+█▀▀ █░█ █▀█ █▀ █▀█ █▀█   █▀▀ █▀▄ █ ▀█▀
+█▄▄ █▄█ █▀▄ ▄█ █▄█ █▀▄   ██▄ █▄▀ █ ░█░
+
+		󱞩 󰀦 IDLE para Coding IA MASIVO .. Mejor que VSC!! 󰨞 [1GB] 
+		
+		
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+					
+					󱞩 Instalar:
+					https://cursor.com/download
+		
+		
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+
+
+yay-S figma-linux
+
+
+
+█▀▀ █ █▀▀ █▀▄▀█ ▄▀█
+█▀░ █ █▄█ █░▀░█ █▀█
+
+		󱞩 󰀦 IDLE para Mockups [Previews de Webs] .. Mejor que Canva   [500mb]
+		
+		
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+			    
+					󱞩 Instalar:
+					https://www.figma.com/es-la/downloads/
+
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+
+
+

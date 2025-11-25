@@ -1,0 +1,30 @@
+[INDICE DE SCRIPTS] + ¿Donde copiarlos?
+- ¿UBICACION?
+C:\Users\Diego\Documents\Scripts
+
+{1 - open_start-windows.vbs } > - .\Scripts
+- DESCRIPCION:
+Abre el inicio de Windows [lo ejecuto desde overline theme [Zebar topbar]
+
+{2 - autotiling.py } > - .\GlazeWM-autotiling-python
+
+Abre el inicio de Windows [lo ejecuto desde overline theme [Zebar topbar]
+
+{3 - montar_unidades.vbs .py } > - \.rclone-v1.71.2-windows-amd64
+
+Abre el inicio de Windows [lo ejecuto desde overline theme [Zebar topbar]
+[.vbs es mas rapido, y va dentro de .rclone] 
+
+[Y LA CARPETA RCLONE?] + ¿Donde copiarlos?
+
+4 - {rclone-v1.71.2-windows-amd64} - CLOUD Google Drive 
+- Es un portable
+
+- Configurar RCLONE con CMD la 1ra vez. lee:
+
+rclone-v1.71.2-windows-amd64 \ README.txt
+
+- ¿UBICACION?
+COPIA EL PORTABLE DE RCLONE EN:
+C:\Users\Diego\Desktop\
+

@@ -1,0 +1,10 @@
+	copy and replace to:
+
+C:\Program Files\glzr.io\GlazeWM
+
+2- Prefieres el original cuando:
+
+- No te importa que se centren las ventanas.
+
+- Si prefieres poder redimensionar TODAS las ventanas
+[util para el Task Manager, Re4 Remake, Geforce NOW etc]

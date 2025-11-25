@@ -1,0 +1,103 @@
+
+█▀▀ █▄░█   █░░ █ █▄░█ █░█ ▀▄▀ ▀
+██▄ █░▀█   █▄▄ █ █░▀█ █▄█ █░█ ▄
+
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+
+█▀▀ █▀█ █▀▄▀█ █▀▀ █▄█ █░█ █
+█▄▄ █▄█ █░▀░█ █▀░ ░█░ █▄█ █
+
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+
+💾 CONFIGURACIÓN ALMACENAMIENTO MASIVO (1TB+)
+Opción 1: Enlaces Simbólicos (Recomendado)
+bash
+
+# Detener ComfyUI primero (Ctrl + C)
+
+# 1. Crear directorio en disco grande
+mkdir -p /ruta/disco-grande/ComfyUI-models
+
+# 2. Mover modelos existentes (si los hay)
+mv ComfyUI/models/* /ruta/disco-grande/ComfyUI-models/
+
+# 3. Eliminar carpeta original y crear enlace
+rm -rf ComfyUI/models
+ln -s /ruta/disco-grande/ComfyUI-models ComfyUI/models
+
+# 4. Verificar
+ls -la ComfyUI/models  # Debe mostrar el enlace
+
+Opción 2: Montar Disco Externo
+bash
+
+# 1. Montar disco
+sudo mount /dev/sdb1 /mnt/comfyui-storage
+
+# 2. Crear enlace
+ln -s /mnt/comfyui-storage/models ComfyUI/models
+
+Opción 3: Configuración Avanzada (YAML)
+bash
+
+# Crear archivo de configuración
+nano extra_model_paths.yaml
+
+Contenido del archivo:
+yaml
+
+base_path: /ruta/disco-grande/ComfyUI-storage
+
+models:
+  checkpoints: /ruta/disco-grande/ComfyUI-storage/checkpoints
+  vae: /ruta/disco-grande/ComfyUI-storage/vae  
+  loras: /ruta/disco-grande/ComfyUI-storage/loras
+  controlnet: /ruta/disco-grande/ComfyUI-storage/controlnet
+
+🗂️ ESTRUCTURA DE CARPETAS PARA MODELOS
+text
+
+/ruta/disco-grande/ComfyUI-models/
+├── checkpoints/          # Modelos principales (2-10GB c/u)
+├── vae/                 # Modelos VAE (300MB-2GB)
+├── loras/               # Modelos LoRA (10-200MB)
+├── controlnet/          # Modelos ControlNet (1-2GB)
+├── upscale_models/      # Modelos upscale (50-500MB)
+└── embeddings/          # Embeddings (1-50MB)
+
+🔄 COMANDOS ÚTILES DIARIOS
+Iniciar ComfyUI:
+bash
+
+cd ComfyUI
+source venv/bin/activate
+python main.py --cpu
+
+Verificar espacio:
+bash
+
+df -h  # Ver espacio en discos
+du -sh ComfyUI/models/  # Tamaño de modelos
+
+Gestionar modelos:
+bash
+
+# Descargar modelo a carpeta correcta
+wget -P /ruta/disco-grande/ComfyUI-models/checkpoints/ "URL_DEL_MODELO"
+
+# Ver modelos instalados
+ls -la /ruta/disco-grande/ComfyUI-models/checkpoints/
+
+
+░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀ ░░▄▀
+▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░ ▄▀░░
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+			    
+			    							▄ ▄ ▄ ▄ ▄
+  							
+			    							
+			    							

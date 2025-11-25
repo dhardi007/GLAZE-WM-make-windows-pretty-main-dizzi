@@ -1,0 +1,188 @@
+
+██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░░█████╗░██████╗░  ░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░██╗░░░░░
+██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗  ██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██║░░░░░
+██║██╔██╗██║╚█████╗░░░░██║░░░███████║██║░░░░░███████║██████╔╝  ██║░░██╗░██║░░░░░██║░░██║██████╦╝███████║██║░░░░░
+██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██╔══██║██╔══██╗  ██║░░╚██╗██║░░░░░██║░░██║██╔══██╗██╔══██║██║░░░░░
+██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗██║░░██║██║░░██║  ╚██████╔╝███████╗╚█████╔╝██████╦╝██║░░██║███████╗
+╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝  ░╚═════╝░╚══════╝░╚════╝░╚═════╝░╚═╝░░╚═╝╚══════╝
+
+ ─❯ 📌 Tanto para Windows, como Linux..
+
+█▀▀ █▄░█   █░░ █ █▄░█ █░█ ▀▄▀ ▀
+██▄ █░▀█   █▄▄ █ █░▀█ █▄█ █░█ ▄
+
+📦🤖📲 ~ >  ─❯ 1. Pasos para instalar Gemini-cli:
+
+ ─❯    1. Script de instalación: En un script (por ejemplo, npm_config.sh) dentro de tus dotfiles, pondrías los siguientes comandos:
+# ~ > Ubicado en: /home/diego/dotfiles/home/npm_gemini_ai_config.sh
+
+#!/bin/bash
+
+# 1. Crea el directorio para paquetes globales si no existe
+mkdir -p ~/.npm-global
+
+# 2. Configura npm para usar ese directorio
+npm config set prefix '~/.npm-global'
+
+# 3. Añade la ruta al PATH si no está ya
+if ! grep -q 'NPM_GLOBAL' ~/.zshrc; then
+  echo 'export PATH=~/.npm-global/bin:$PATH # NPM_GLOBAL' >> ~/.zshrc
+fi
+
+#instalar sin sudo, sudo lo USAS si instalas desde la raiz ~/
+npm install -g @google/gemini-cli
+
+ ─❯🚨	2. Ejecutar el script: En tu archivo .zshrc, añadirías una línea para ejecutar este script la primera vez que configures la terminal:
+ 
+ bash npm_gemini_ai_config.sh
+ 	
+ 		╰─❯ una vez instalado ejecuta..
+ 			|
+ 			╰─❯ gemini
+ 			   ╰─❯ escribe tus prompts, y para cerrarlo..
+ 			      ╰─❯ {Ctrl+D}
+
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+	
+				╰─❯  ─❯ 🚨 1. NO USES NPM global en windows, solo aplica en linux. Ejecuta por las dudas:
+					 npm config delete prefix
+					 npm config get prefix
+
+ 				      ─❯ 🚨 2. instalar gemini similar a linux
+					npm install -g @google/gemini-cli
+
+📌 En un principio es igual, pero quise matizar el npm-global issue ya que windows no lo soporta o lo integro bien cuando lo probe.
+
+📌 Con esto ya instalaste Gemini AI, y te logeas con Google o API KEY (peor)
+
+---------------------------
+////////////////////////
+---------------------------
+
+ ─❯ 📌 Falta configurar el idioma en español
+
+📦🤖📲 ~ >  ─❯ 2. Pasos para instalar TGPT-cli:
+
+█▀▀ █▄░█   █░░ █ █▄░█ █░█ ▀▄▀ ▀
+██▄ █░▀█   █▄▄ █ █░▀█ █▄█ █░█ ▄
+
+ ─❯ 🚨   1. Instalar desde Arch
+sudo pacman -S tgpt
+
+ ─❯🚨	2. Ejecutar tgpt+ promp:
+tgpt "esto es un promp"
+
+ ─❯🚨	3. Otros ejemplos de prompt, generar imagenes.. 
+	~ todo se puede ver en mi carpeta:
+	test tgpt images
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+	
+				╰─❯  ─❯ 🚨   1. Instalar desde Scoop
+				scoop install https://raw.githubusercontent.com/aandrew-me/tgpt/main/tgpt.json
+				
+				 ─❯ 🚨   2. Para desinstalar (opcional)
+				 scoop uninstall tgpt
+---------------------------
+////////////////////////
+---------------------------
+
+ ─❯ 📌 WARP nO es un cli, es una terminal.. Y Falta configurar el idioma en español
+
+█▀▀ █▄░█   █░░ █ █▄░█ █░█ ▀▄▀ ▀
+██▄ █░▀█   █▄▄ █ █░▀█ █▄█ █░█ ▄
+
+ 📦🤖📲 ~ >  ─❯ 2. Pasos para instalar WARP terminal AI:
+
+ ─❯ 🚨   1. Instalar desde Arch
+yay -S warp-terminal-bin
+
+ ─❯🚨	2. Configurar tema de color... 
+~ > Crea el directorio themes: 
+mkdir -p ${XDG_DATA_HOME:-$HOME/.local/share}/warp-terminal/themes/
+
+~ > Crea el arhcivo/o salta esto y importa
+mkdir -p minttypastel-dracula\minttypastel-dracula.yaml 
+nvim minttypastel-dracula\minttypastel-dracula.yaml 
+
+~ Y importalo a themes
+cp minttypastel-dracula\minttypastel-dracula.yaml .local/share}/warp-terminal/themes/
+
+ ─❯🚨	3. importar Settings de warp... 
+~ > eso mismo, ve a Settings > Appareances, click en el tema, y recien ahi sale el menu.. {bien escondido mmg}
+> Marca opacidad entre 61-90
+
+ ─❯🚨	???. {Opcional}Tambien puedes importar un repo con temas diversos :
+mkdir -p ${XDG_DATA_HOME:-$HOME/.local/share}/warp-terminal
+cd ${XDG_DATA_HOME:-$HOME/.local/share}/warp-terminal/
+git clone https://github.com/warpdotdev/themes.git
+
+			|
+ 			╰─❯ █▄█   █▀▀ █▄░█   █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█ █▀ ▀
+			    ░█░   ██▄ █░▀█   ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀ ▄█ ▄
+	
+				╰─❯ 🚨	1. Descargar WARP .exe desde: 
+				https://www.warp.dev/download
+
+
+				 ─❯🚨	2. Configurar tema de color... 
+				 ╰─❯ ~ > Crea el directorio themes: 
+				New-Item -Path "$env:APPDATA\warp\Warp\data\themes\" -ItemType Directory
+
+				 ╰─❯ ~ > Crea el arhcivo/o salta esto y importa
+				mkdir -p minttypastel-dracula\minttypastel-dracula.yaml 
+				nvim minttypastel-dracula\minttypastel-dracula.yaml 
+
+				 ╰─❯ ~ Y importalo a themes
+				cp minttypastel-dracula\minttypastel-dracula.yaml C:\Users\Diego.DESKTOP-0CQHRL5\AppData\Roaming\warp\Warp\data\themes\
+
+
+				 ─❯🚨	???. {Opcional}Tambien puedes importar un repo con temas diversos :
+				 ╰─❯ New-Item -Path "$env:APPDATA\warp\Warp\data\" -ItemType Directory
+					Set-Location -Path $env:APPDATA\warp\Warp\data\
+					git clone https://github.com/warpdotdev/themes.git
+
+
+─❯ 📌 tambien puedes poner una imagen pero paja..
+
+############################################################### SEE BELOW
+background_image:
+  # the path is relative to ~/.warp/themes/
+  # the full path to the picture is: ~/.warp/themes/warp.jpg
+  path: warp.jpg
+  
+  
+
+─❯ 📌 EN CASO DE QUE SE CORROMPA GEMINI-CLI 󰀦 ~ 󰀦
+─❯ 📌 EN CASO DE QUE SE CORROMPA GEMINI-CLI 󰀦 ~ 󰀦
+
+█▀█ █▀█ ▀█▀ █▀█
+█▀▀ █▄█ ░█░ █▄█
+
+🚨 1. Borrar instalación corrupta:
+rm -rf ~/.npm-global/lib/node_modules/@google/gemini-cli
+rm -f ~/.npm-global/bin/gemini
+
+🚨 2. Limpiar la caché de npm:
+npm cache clean --force
+
+🚨 3. Reinstalar gemini-cli:	
+npm install -g @google/gemini-cli
+		╰─❯ En linux usaria mi script:
+			bash ~/npm_gemini_ai_config.sh
+			
+🚨 4. Verificar que el binario está accesible:
+ls -l ~/.npm-global/bin | grep gemini
+which gemini
+gemini --version
+
+📌 Si `which gemini` no apunta a `~/.npm-global/bin/gemini`, revisa tu archivo `~/.zshrc` y asegúrate de tener:
+export PATH="$HOME/.npm-global/bin:$PATH" # NPM_GLOBAL
+Luego recarga con:
+source ~/.zshrc
+
+📌 Tip: si usaste `sudo npm install -g` antes, elimina esos restos y no mezcles `sudo` con instalaciones en tu home.
+
