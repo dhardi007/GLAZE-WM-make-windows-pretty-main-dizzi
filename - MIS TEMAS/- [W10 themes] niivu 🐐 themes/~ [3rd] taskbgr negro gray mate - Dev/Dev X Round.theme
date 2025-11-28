@@ -1,0 +1,27 @@
+; Copyright � Microsoft Corp.
+
+[Theme]
+; Windows 10 - IDS_THEME_DISPLAYNAME_Dev X Round
+DisplayName=Dev X Round
+SetLogonBackground=0
+
+[Control Panel\Desktop]
+Wallpaper=%SystemRoot%\Resources\Themes\Dev\Wallpaper
+TileWallpaper=0
+WallpaperStyle=10
+Pattern=
+
+[VisualStyles]
+Path=%SystemRoot%\Resources\Themes\Dev\Dev X Round.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+AutoColorization=0
+ColorizationColor=0XFF1C2028
+SystemMode=Dark
+AppMode=Dark
+
+[boot]
+SCRNSAVE.EXE=
+
+[MasterThemeSelector]
+MTSM=RJSPBS
