@@ -25,7 +25,7 @@ general:
   startup_commands:
     # - "shell-exec python C:\\Users\\Diego\\Documents\\Scripts\\autotiling.py"
     - "shell-exec pwsh -WindowStyle Hidden -Command \"& 'C:\\Users\\Diego\\Documents\\Scripts\\delete-edge.ps1'; exit\""
-    - "shell-exec zebar"
+    # - "shell-exec zebar"
     # - "shell-exec wscript C:\\Users\\Diego\\Documents\\Scripts\\montar_unidades.vbs"
     # - "shell-exec python C:\\Users\\Diego\\Documents\\Scripts\\montar_unidades.py"
 
@@ -71,11 +71,11 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "10px" # ✅ CERO espacio entre ventanas
+  inner_gap: "0px" # ✅ CERO espacio entre ventanas
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "40px" # ✅ CERO espacio en bordes
+    top: "0px" # ✅ CERO espacio en bordes
     right: "0px"
     bottom: "0px"
     left: "0px"
@@ -86,9 +86,9 @@ gaps:
 #   # Gap between windows and the screen edge.
 #   outer_gap:
 #     top: "40px"
-#     right: "10px"
-#     bottom: "10px"
-#     left: "10px"
+#     right: "0px"
+#     bottom: "0px"
+#     left: "0px"
 
 # ========================================
 # WORKSPACES
@@ -97,11 +97,8 @@ workspaces:
   # This is the unique ID for the workspace. It's used in keybinding
   # commands, and is also the label shown in 3rd-party apps (e.g. Zebar) if
   # `display_name` is not provided.
-  - name: "1" # Al arrancar inicia en el 1
-    # Optional override for the workspace label used in 3rd-party apps.
-    # Does not need to be unique.
-    display_name: "2B^ Kaine🖤"
   - name: "2"
+    display_name: "Music🎻"
   - name: "3"
   - name: "4"
   - name: "5"
@@ -109,7 +106,11 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
-    display_name: "Music🎻"
+  # ESTO ESTA MAL PERO SE INICIA A PARTIR DEL ULTIMO NAME.
+  - name: "1" # Al arrancar inicia en el 1
+    # Optional override for the workspace label used in 3rd-party apps.
+    # Does not need to be unique.
+    display_name: "2B^ Kaine🖤"
 
     # Optionally force the workspace on a specific monitor if it exists.
     # 0 is your leftmost screen, 1 is the next one to the right, and so on.
@@ -142,7 +143,7 @@ window_rules:
       - window_process: { regex: "msedge|brave|chrome|firefox" }
 
   # MUSIC
-  - commands: ["move --workspace 9"]
+  - commands: ["move --workspace 2"]
     match:
       # Move browsers to workspace 1.
       - window_process: { regex: "spotify|footbar|vlc|youtube|kew" }
