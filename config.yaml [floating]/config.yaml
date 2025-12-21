@@ -157,6 +157,12 @@ window_rules:
       # - window_process: { regex: "spotify|footbar|vlc|youtube|kew" }
       # kew terminal god
 
+  # OTHERS
+  - commands: ["move --workspace 9"]
+    match:
+      # Move to workspace 9
+      - window_process: { regex: "internet download" }
+
   # ---------------- ignorar ----------------------
   - commands: ["ignore"]
     match:

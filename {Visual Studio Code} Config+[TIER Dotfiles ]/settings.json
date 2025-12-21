@@ -5,7 +5,7 @@
   */
     // ========== CONFIGURACIÓN DE DIÁLOGOS ==========
   "window.dialogStyle": "custom",
-  "window.titleBarStyle": "custom",
+  "window.titleBarStyle": "native",
         // centrar el editor
         "workbench.editor.centerLayout": true,
         "workbench.editor.centeredLayoutAutoResize": false,
@@ -87,24 +87,10 @@
         // "editor.cursorBlinking": "solid",
         // "editor.cursorStyle": "block",
         "workbench.colorCustomizations": {
-                // "editorCursor.background": "#000000",
-                // "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-                // "editorOverviewRuler.selectionHighlightForeground": "#0000",
-                // "editorOverviewRuler.rangeHighlightForeground": "#0000",
-                // "editorOverviewRuler.wordHighlightForeground": "#0000",
-                // "editorOverviewRuler.bracketMatchForeground": "#0000",
-                // "editorOverviewRuler.findMatchForeground": "#0000",
-                // "editorOverviewRuler.modifiedForeground": "#0000",
-                // "editorOverviewRuler.deletedForeground": "#0000",
-                // "editorOverviewRuler.warningForeground": "#0000",
-                // "editorOverviewRuler.addedForeground": "#0000",
-                // "editorOverviewRuler.errorForeground": "#0000",
-                // "editorOverviewRuler.infoForeground": "#0000",
-                // "editorOverviewRuler.border": "#0000",
-                "[Aura Dracula Spirit (Soft)]": {
-                        "editorSuggestWidget.selectedBackground": "#3A334B",
-                        "sideBar.background": "#191521"
-                }
+          "[Aura Dracula Spirit (Soft)]": {
+            "editorSuggestWidget.selectedBackground": "#3A334B",
+            "sideBar.background": "#191521"
+          }
         },
         "editor.fontSize": 14,
         "editor.lineHeight": 2.5,
@@ -230,7 +216,7 @@
         "editor.minimap.renderCharacters": true,
         "editor.minimap.enabled": true,
         "window.controlsStyle": "custom",
-        "glassit.alpha": 230,
+        "glassit.alpha": 240,
         "colorInfo.languages": [
                 {
                         "selector": "css",
@@ -318,5 +304,15 @@
         "python.defaultInterpreterPath": "c:\\Users\\Diego\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
         "security.workspace.trust.banner": "never",
         "security.workspace.trust.enabled": false,
-        "oil-code.enableWorkspaceEdit": true
+        "oil-code.enableWorkspaceEdit": true,
+        // -------------------- (BLUR GLASS) VIBRANCY SETTINGS -----------------
+        // Activar el Blur , glass effect
+        // "vscode_vibrancy.type": "acrylic",
+        // "vscode_vibrancy.opacity": 0.9,
+        // "vscode_vibrancy.disableFramelessWindow": true,
+        // "vscode_vibrancy.preventFlash": true,
+        // "window.systemColorTheme": "dark",
+        // "window.autoDetectColorScheme": false
+        // "terminal.integrated.gpuAcceleration": "off" // ~ esto relantiza, recordatorio: elminalo cunado actives vribancy
+        // -------------------- VIBRANCY SETTINGS -----------------
 }

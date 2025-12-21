@@ -1,0 +1,35 @@
+// 🔧 Cambiar Teclado a EN (dejando idioma de apps en Español)
+// Ejecutar en PowerShell como Administrador:
+
+○ Cargar la lista actual
+$list = Get-WinUserLanguageList
+
+○ Para el idioma español, quitar el teclado
+$list[0].InputMethodTips.Clear()
+
+○ Agregar el teclado inglés (US)
+$list[0].InputMethodTips.Add("0409:00000409")
+
+○ Aplicar los cambios
+Set-WinUserLanguageList $list -Force
+
+// ✅ El layout del teclado ahora será únicamente en-US,
+//    pero se mantendrá Español como idioma de aplicaciones.
+
+// ------------------------------------------------------------
+
+// 🖱️ Cambiar desplazamiento del touchpad (natural / invertido)
+// Ejecutar (Win + R) o en PowerShell:
+
+○ Abrir la config del touchpad
+ms-settings:devices-touchpad
+
+○ Presioná Enter → se abre Configuración → Dispositivos → Touchpad
+
+○ Ahí podés:
+   - Cambiar el tipo de desplazamiento (natural/invertido)
+   - Ajustar velocidad del cursor
+   - Configurar gestos y sensibilidad
+// ------------------------------------------------------------
+
+

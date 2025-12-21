@@ -1,0 +1,91 @@
+
+░█████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗  ██████╗░░█████╗░░██████╗██╗░░██╗  ███████╗███╗░░██╗
+██╔══██╗██║░░██║  ████╗░████║╚██╗░██╔╝  ██╔══██╗██╔══██╗██╔════╝██║░░██║  ██╔════╝████╗░██║
+██║░░██║███████║  ██╔████╔██║░╚████╔╝░  ██████╔╝██║░░██║╚█████╗░███████║  █████╗░░██╔██╗██║
+██║░░██║██╔══██║  ██║╚██╔╝██║░░╚██╔╝░░  ██╔═══╝░██║░░██║░╚═══██╗██╔══██║  ██╔══╝░░██║╚████║
+╚█████╔╝██║░░██║  ██║░╚═╝░██║░░░██║░░░  ██║░░░░░╚█████╔╝██████╔╝██║░░██║  ███████╗██║░╚███║
+░╚════╝░╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░░░╚═╝░░░  ╚═╝░░░░░░╚════╝░╚═════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚══╝
+
+░██╗░░░░░░░██╗██╗███╗░░██╗██████╗░░█████╗░░██╗░░░░░░░██╗░██████╗
+░██║░░██╗░░██║██║████╗░██║██╔══██╗██╔══██╗░██║░░██╗░░██║██╔════╝
+░╚██╗████╗██╔╝██║██╔██╗██║██║░░██║██║░░██║░╚██╗████╗██╔╝╚█████╗░
+░░████╔═████║░██║██║╚████║██║░░██║██║░░██║░░████╔═████║░░╚═══██╗
+░░╚██╔╝░╚██╔╝░██║██║░╚███║██████╔╝╚█████╔╝░░╚██╔╝░╚██╔╝░██████╔╝
+░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═════╝░
+
+████████╗███████╗██████╗░███╗░░░███╗██╗███╗░░██╗░█████╗░██╗░░░░░
+╚══██╔══╝██╔════╝██╔══██╗████╗░████║██║████╗░██║██╔══██╗██║░░░░░
+░░░██║░░░█████╗░░██████╔╝██╔████╔██║██║██╔██╗██║███████║██║░░░░░
+░░░██║░░░██╔══╝░░██╔══██╗██║╚██╔╝██║██║██║╚████║██╔══██║██║░░░░░
+░░░██║░░░███████╗██║░░██║██║░╚═╝░██║██║██║░╚███║██║░░██║███████╗
+░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚══════╝
+
+1. Instalar Oh My Posh (vía Winget)
+Ejecuta en PowerShell o Terminal:
+winget install JanDeDobbeleer.OhMyPosh -s winget
+
+2. Verificar instalación
+Para confirmar que se instaló correctamente:
+oh-my-posh
+(Deberías ver la versión y comandos disponibles.)
+
+3. Instalar una fuente compatible (FiraCode, NerdFont etc)
+Oh My Posh usa iconos y símbolos que requieren fuentes especiales (como Nerd Fonts)
+Incluso modulos como Image Viewlist ocupan Nerdfont o firaCode.
+
+- Instala una recomendada con:
+oh-my-posh font install
+
+*te saldran muchas fuentes, elige si o si NerdFont, y luego
+firaCode, navega con las flechas*
+
+- (Sigue las instrucciones para configurar la fuente en tu terminal.)
+
+Click en *v* > Configuracion/Settings > Valores predeterminados>
+> Apariencia > Tipo de fuente > Elige Fira Code NerdFont
+
+4- Inicia el tema de OhMyPosh, cambiando el tema.omp.json 
+por los temas en cuestion
+https://ohmyposh.dev/docs/themes
+
+Temas favoritos:
+- 1_shell.omp.json
+- jandedobbeleer.omp.json
+
+- Una vez decidas, ejecuta con el tema el sig codigo:
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\1_shell.omp.json" | Invoke-Expression
+
+*Ahora hace falta: Configuración Automática en PowerShell*
+5. Generar comando de inicialización
+Ejecuta esto para obtener la línea que carga 
+Oh My Posh al iniciar PowerShell:
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\1_shell.omp.json"
+
+(Esto mostrará un código que debes guardar en tu perfil de PowerShell.)
+
+dato importante:
+*$PROFILE = similar a bashrc pero en powershell*
+*$PROFILE = ubicado en documentos, a diferencia de bashrc
+ que esta ubicado en el directorio del usuario*
+
+5. Configurar el perfil de PowerShell $PROFILE
+
+- Crear/editar el perfil:
+
+New-Item -Path $PROFILE -Type File -Force
+notepad $PROFILE
+
+- y puedes revisar la ubicacion con 
+
+explorer ~/$PROFILE
+
+- Pega el código generado en el paso 4 (debe verse similar a esto):
+
+& 'C:\Users\Diego.DESKTOP-0CQHRL5\AppData\Local\oh-my-posh\init.26.14.3.742fba4643736cbe.5.ps1'
+
+(Reemplaza [TuUsuario] {despues de C:\Users\} con tu nombre 
+de usuario en Windows.). En mi caso fue: Diego.DESKTOP-0CQHRL5
+
+Guarda el archivo y reinicia PowerShell.

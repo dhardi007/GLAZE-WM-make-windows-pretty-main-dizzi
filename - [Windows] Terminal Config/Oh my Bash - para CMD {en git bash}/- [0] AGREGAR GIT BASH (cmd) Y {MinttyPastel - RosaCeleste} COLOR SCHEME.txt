@@ -1,0 +1,161 @@
+
+░██████╗░██╗████████╗  ██████╗░░█████╗░░██████╗██╗░░██╗
+██╔════╝░██║╚══██╔══╝  ██╔══██╗██╔══██╗██╔════╝██║░░██║
+██║░░██╗░██║░░░██║░░░  ██████╦╝███████║╚█████╗░███████║
+██║░░╚██╗██║░░░██║░░░  ██╔══██╗██╔══██║░╚═══██╗██╔══██║
+╚██████╔╝██║░░░██║░░░  ██████╦╝██║░░██║██████╔╝██║░░██║
+░╚═════╝░╚═╝░░░╚═╝░░░  ╚═════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝
+
+░█████╗░░█████╗░██╗░░░░░░█████╗░██████╗░
+██╔══██╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗
+██║░░╚═╝██║░░██║██║░░░░░██║░░██║██████╔╝
+██║░░██╗██║░░██║██║░░░░░██║░░██║██╔══██╗
+╚█████╔╝╚█████╔╝███████╗╚█████╔╝██║░░██║
+░╚════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚═╝
+
+░██████╗░█████╗░██╗░░██╗███████╗███╗░░░███╗███████╗
+██╔════╝██╔══██╗██║░░██║██╔════╝████╗░████║██╔════╝
+╚█████╗░██║░░╚═╝███████║█████╗░░██╔████╔██║█████╗░░
+░╚═══██╗██║░░██╗██╔══██║██╔══╝░░██║╚██╔╝██║██╔══╝░░
+██████╔╝╚█████╔╝██║░░██║███████╗██║░╚═╝░██║███████╗
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝
+
+
+AGREGAR GIT BASH (cmd) Y {MinttyPastel - RosaCeleste} COLOR SCHEME
+
+🧭 Paso a paso para tener instalado Oh My Bash con perfiles distintos
+*oh my posh y ohmybash comparten paleta de colores*
+
+✅ 1. Instala git Bash y luego Windows terminal (en la Store)
+asi agregas git bash automaticamente a cmd.
+
+Si de casualidad ya tenias  instalado windows terminal y
+no tienes agregado git bash...
+
+✅ 2. Cómo agregar Git Bash al archivo settings.json de CMD (opcional)
+- Navega; windows+r > cmd > settings > click *v* > settings.json
+
+- Localiza la sección "profiles" > "list" y
+añade este bloque JSON dentro del arreglo "list" para Git Bash:
+*al inicio*
+
+   "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "MinttyPastel",
+            "font": 
+            {
+                "face": "FiraCode Nerd Font"
+            },
+            "opacity": 90
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "MinttyPastel",
+                "elevate": true,
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "elevate": true,
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "S\u00edmbolo del sistema"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "colorScheme": "MinttyPastel",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
+                "colorScheme": "MinttyPastel",
+                "elevate": false,
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "colorScheme": "MinttyPastel",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "elevate": true,
+                "guid": "{fc08c5f8-d22c-423a-9280-011cbe7d56f4}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\git-bash.exe",
+                "name": "Git Bash"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{31d7b490-5122-5bb3-b6e9-db2f8accce60}",
+                "hidden": false,
+                "name": "archlinux",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "commandline": "C:\\Program Files\\WindowsApps\\MicrosoftCorporationII.WindowsSubsystemForLinux_2.4.11.0_x64__8wekyb3d8bbwe\\wsl.exe",
+                "guid": "{5e30929e-773f-4bbf-a158-b3383d57b6f8}",
+                "hidden": false,
+                "icon": "C:\\Users\\Diego.DESKTOP-0CQHRL5\\AppData\\Local\\wsl\\{7bef3c27-2c74-4867-8536-770bdb51210c}\\shortcut.ico",
+                "name": "archlinux (workspace Windows :\\C)",
+                "pathTranslationStyle": "wsl",
+                "startingDirectory": "~"
+            }
+        ]
+    },
+        
+✅ Listo, ¡¡Ya agregaste Git Bash!!
+
+✅ 3 Crea un esquema (color scheme) en settings.json
+- Abre Windows Terminal → Configuración → Abre settings.json.
+
+Dentro del array "schemes", agrega algo así:
+*Y verifica si ya existe MinttyPastel*
+
+    "schemes": 
+    [
+        {
+            "background": "#282A36",
+            "black": "#282A36",
+            "blue": "#585858",
+            "brightBlack": "#FFFFFF",
+            "brightBlue": "#ADD8FF",
+            "brightCyan": "#B7F2EB",
+            "brightGreen": "#C3F5AA",
+            "brightPurple": "#DDBDFF",
+            "brightRed": "#FF8782",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFF1AA",
+            "cursorColor": "#BD93F9",
+            "cyan": "#94E2D5",
+            "foreground": "#A195D9",
+            "green": "#FFF1AA",
+            "name": "MinttyPastel",
+            "purple": "#C6A0F6",
+            "red": "#FF695F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEEEEE",
+            "yellow": "#F9E2AF"
+        },

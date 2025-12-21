@@ -1,0 +1,11 @@
+Tecnicamente instalar Oh My Bash es lo mismo en linux,
+PERO esta pensado para windows.
+
+~ Aparte uso zsh antes que bash en Linux Arch y los dotfiles🙏✍🔥...
+
+
+📌 ~ > Puse directamemnte settings.json con la CONFIG de windows terminal para la paleta de colores y los gui etc.. solo procura cambiar las rutas relativas.
+ 
+~ > Microsoft.PowerShell_profile.ps1
+
+Esta vendría siendo la cofing de Powershell en Windows, ubicado en documentos > C:\Users\|TU-USUARIO|\Documents\WindowsPowerShell

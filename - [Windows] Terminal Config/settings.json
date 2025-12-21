@@ -92,7 +92,8 @@
         "face": "FiraCode Nerd Font",
         "size": 8
       },
-      "opacity": 90
+      "opacity": 90,
+      "useAcrylic": false
     },
     "list": [
       {
