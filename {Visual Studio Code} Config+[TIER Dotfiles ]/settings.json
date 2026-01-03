@@ -303,7 +303,7 @@
   "python.defaultInterpreterPath": "c:\\Users\\Diego\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.enabled": false,
-  "oil-code.enableWorkspaceEdit": true
+  "oil-code.enableWorkspaceEdit": true,
   // -------------------- (BLUR GLASS) VIBRANCY SETTINGS -----------------
   // Activar el Blur , glass effect
   // "vscode_vibrancy.type": "acrylic",
@@ -314,4 +314,5 @@
   // "window.autoDetectColorScheme": false
   // "terminal.integrated.gpuAcceleration": "off" // ~ esto relantiza, recordatorio: elminalo cunado actives vribancy
   // -------------------- VIBRANCY SETTINGS -----------------
+  "git.confirmSync": false
 }
