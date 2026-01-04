@@ -60,3 +60,5 @@ usernamehw.errorlens
 wix.vscode-import-cost
 zarifprogrammer.tailwind-snippets
 zignd.html-css-class-completion
+tomrijndorp.find-it-faster
+jellydn.find-it-faster
