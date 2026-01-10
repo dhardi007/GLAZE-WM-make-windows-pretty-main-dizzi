@@ -217,7 +217,7 @@
   "editor.minimap.renderCharacters": true,
   "editor.minimap.enabled": true,
   "window.controlsStyle": "custom",
-  "glassit.alpha": 240,
+  "glassit.alpha": 255,
   "colorInfo.languages": [
     {
       "selector": "css",
