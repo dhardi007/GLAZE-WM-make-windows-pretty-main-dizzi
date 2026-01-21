@@ -185,3 +185,5 @@ function vscode {
   else { & code.exe $Path }
 }
 
+# Ejecuta con dot-sourcing- CARGAR APIS-keys en la sesion actual.
+. .\.api-keys.ps1
