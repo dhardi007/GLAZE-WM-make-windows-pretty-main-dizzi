@@ -207,4 +207,5 @@ local/.local/share/lutris/runtime/
 **/.virtualenv/
 home/dotfiles-dizzi/home/LinuxPyMacroRecord/PyMacroRecord-1.4.2/venv/
 home/dotfiles-dizzi/home/LinuxPyMacroRecord/PyMacroRecord-1.4.1/venv/
-
+./Scripts/winwal/
+./Scripts/winutil/
