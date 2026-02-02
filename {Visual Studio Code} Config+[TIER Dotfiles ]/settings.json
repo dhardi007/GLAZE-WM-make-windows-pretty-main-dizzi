@@ -304,7 +304,7 @@
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.enabled": false,
   "oil-code.enableWorkspaceEdit": true,
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
   "terminal.integrated.fontLigatures.enabled": true,
   // -------------------- (BLUR GLASS) VIBRANCY SETTINGS -----------------
   // Activar el Blur , glass effect
