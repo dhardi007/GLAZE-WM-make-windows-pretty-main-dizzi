@@ -79,14 +79,14 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "0px" # ✅ CERO espacio entre ventanas
+  inner_gap: "3px" # ✅ CERO espacio entre ventanas
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "0px" # ✅ CERO espacio en bordes
-    right: "0px"
-    bottom: "0px"
-    left: "0px"
+    top: "1px" # ✅ CERO espacio en bordes
+    right: "1px"
+    bottom: "1px"
+    left: "1px"
 
 # gaps:
 #   # Gap between adjacent windows.
