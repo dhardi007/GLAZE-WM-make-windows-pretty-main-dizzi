@@ -104,7 +104,7 @@ Import-Module PSFzf
 Import-Module ~\Documents\winwal\winwal.psm1 -DisableNameChecking
 Import-Module ~\Documents\winwal\WalManager.psm1 -DisableNameChecking
 # Luego ZLocation - para evitar sobreescribir el prompt suggestion.
-Import-Module ZLocation
+#Import-Module ZLocation # LO ELIMINE PORQUE SIEMPRE CRASHEA.
 
 # PSScriptAnalyzer no necesita ser importado en el perfil.
 
